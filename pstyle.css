@@ -1,0 +1,117 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+html,body{
+    width: 100%;
+    height: 100%;
+}
+
+#main{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background-image: url("https://wallpaperaccess.com/full/468015.jpg");
+    background-size: cover;
+}
+#front{
+    position: absolute;
+    width: 40%;
+    height: 90%;
+    left: 6%;
+    top: 5%;
+    border: 10px;
+    border-style: solid;
+    border-color: #fff;
+    padding: 2% 5%;
+    background-color: rgba(252, 87, 87, 0.253);
+}
+
+#title{
+    color: #fff;
+    font-family: gilroy;
+    margin-top: 10px;
+    font-size: 4.5rem;
+    margin-bottom: 0;
+    line-height: 1;
+    margin-left: 0;
+    font-weight: 700;
+    padding: 2% 4% ;
+}
+
+#content{
+    font-size: 1.875rem;
+    margin: 20px 0 0;
+    padding: 2% 4% 5%;
+    color: #fff;
+}
+
+.button{
+    display: inline-block;
+    color: #fff;
+    text-decoration:none;
+    padding: 20px 50px;
+    border: 3px solid #8d1414;
+    border-radius: 10px;
+}
+.button:hover{
+    animation: pulse 3s ease-in-out;
+}
+@keyframes pulse {
+    0%{
+        box-shadow: 0 0 25px #810202, 0 0 50px #9c021c;
+    }   
+}
+
+.navbar{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    background-color: rgba(221, 64, 64, 0.377);
+    padding: 15px;
+}
+
+.navbar a{
+    text-decoration: none;
+    color:antiquewhite;
+}
+
+.logo{
+    margin-right: 50px;
+}
+
+.list{
+    list-style: none;
+    display: flex;
+    gap: 25px;
+}
+
+#box,
+.navbar lable{
+    display: none;
+}
+
+@media screen and 
+(max-width: 600px){
+    .menu{
+        width: 100%;
+        max-height: 0; 
+        overflow: hidden;
+    }
+    .list{
+        flex-direction: column;
+        align-items: center;
+        padding: 20px;
+    }
+    .navbar label{
+        display: inline-flex; 
+        align-items: center;
+        cursor: pointer;
+    }
+    
+    #toggler:checked ~ .menu{
+        max-height: 100%;
+    }
+} 
